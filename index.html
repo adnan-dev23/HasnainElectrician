@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasnain Electrician | Junaid Shah - Professional Electrical Contractor</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        slate: {
+                            850: '#151f32',
+                            950: '#070b13'
+                        },
+                        amber: {
+                            brand: '#f59e0b',
+                            hover: '#d97706'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #070b13;
+            color: #f1f5f9;
+        }
+        .font-heading {
+            font-family: 'Outfit', sans-serif;
+        }
+        /* Custom image zoom on hover */
+        .work-card:hover .work-thumb {
+            transform: scale(1.05);
+        }
+        /* Clean scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b1120;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #334155;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 flex flex-col min-h-screen">
+
+    <header class="sticky top-0 z-40 bg-slate-950/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 py-3.5 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold text-lg shadow-sm">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <div>
+                    <span class="font-heading text-lg sm:text-xl font-bold tracking-tight text-white block leading-tight">
+                        Hasnain <span class="text-amber-400">Electrician</span>
+                    </span>
+                    <span class="text-xs text-slate-400 font-medium flex items-center gap-1.5">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block animate-pulse"></span>
+                        Junaid Shah &bull; On-Site Electrical Works
+                    </span>
+                </div>
+            </a>
+
+            <!-- Header Action Controls -->
+            <div class="flex items-center gap-3">
+                <!-- Admin Upload Mode Toggle Button -->
+                <button onclick="openUploadModal()" class="px-3.5 py-2 rounded-lg bg-slate-900 border border-slate-700 hover:border-amber-500/50 text-slate-200 text-xs sm:text-sm font-semibold flex items-center gap-2 transition hover:text-white">
+                    <i class="fa-solid fa-camera text-amber-400"></i>
+                    <span class="hidden sm:inline">Upload Work</span>
+                    <span class="sm:hidden">Upload</span>
+                </button>
+
+                <!-- Direct Call -->
+                <a href="tel:+919876543210" class="px-4 py-2 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs sm:text-sm font-bold flex items-center gap-2 transition shadow-md">
+                    <i class="fa-solid fa-phone"></i>
+                    <span class="hidden md:inline">Call Now</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section class="relative overflow-hidden border-b border-slate-800/80 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950 pt-12 pb-16 md:py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs font-medium mb-6">
+                    <i class="fa-solid fa-shield-halved text-amber-400"></i>
+                    <span>Licensed &bull; 10+ Years Experience &bull; 100% On-Site Service</span>
+                </div>
+
+                <h1 class="font-heading text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight max-w-4xl mx-auto">
+                    Master Electrical Contracting & <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200">Modern Installations</span>
+                </h1>
+
+                <p class="mt-5 text-base sm:text-lg text-slate-400 max-w-2xl mx-auto font-normal">
+                    Lead Electrician <strong>Junaid Shah</strong> provides comprehensive on-site electrical installations, concealed house wiring, designer profile lighting, and commercial panel maintenance.
+                </p>
+
+                <!-- Action CTA Cluster -->
+                <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+                    <a href="tel:+919876543210" class="px-6 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm sm:text-base flex items-center gap-2.5 transition shadow-lg shadow-amber-500/10">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <span>Call +91 98765-43210</span>
+                    </a>
+
+                    <a href="https://wa.me/919876543210?text=Hello%20Junaid,%20I%20would%20like%20to%20discuss%20an%20electrical%20project." target="_blank" class="px-6 py-3.5 rounded-xl bg-[#25d366] hover:bg-[#20ba59] text-white font-bold text-sm sm:text-base flex items-center gap-2.5 transition shadow-lg shadow-emerald-500/10">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>WhatsApp Chat</span>
+                    </a>
+
+                    <button onclick="openUploadModal()" class="px-5 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-semibold text-sm flex items-center gap-2 transition">
+                        <i class="fa-solid fa-plus-circle text-amber-400"></i>
+                        <span>Add New Photo</span>
+                    </button>
+                </div>
+
+                <!-- Live Service Metrics -->
+                <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto text-left">
+                    <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800">
+                        <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Service Model</div>
+                        <div class="text-sm sm:text-base font-bold text-white mt-1">Direct Site & Home Visits</div>
+                    </div>
+                    <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800">
+                        <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Contractor</div>
+                        <div class="text-sm sm:text-base font-bold text-white mt-1">Junaid Shah</div>
+                    </div>
+                    <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800">
+                        <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Card Name</div>
+                        <div class="text-sm sm:text-base font-bold text-amber-400 mt-1">Hasnain Electrician</div>
+                    </div>
+                    <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800">
+                        <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Response</div>
+                        <div class="text-sm sm:text-base font-bold text-emerald-400 mt-1">Immediate On-Call</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="work" class="py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+                    <div>
+                        <div class="text-xs font-semibold text-amber-400 uppercase tracking-wider mb-1">Live Gallery</div>
+                        <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-white">Recent Work Done by Junaid Shah</h2>
+                        <p class="text-slate-400 text-sm mt-1">Real completed works documented directly from job sites.</p>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <button onclick="openUploadModal()" class="px-4 py-2 bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-amber-500/40 rounded-lg text-xs font-semibold text-slate-200 transition flex items-center gap-2">
+                            <i class="fa-solid fa-cloud-arrow-up text-amber-400"></i>
+                            <span>Upload Photo from Phone</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Category Filter Buttons -->
+                <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-6 text-sm no-scrollbar">
+                    <button onclick="setFilter('all', this)" class="filter-btn active px-4 py-2 rounded-lg font-medium whitespace-nowrap transition bg-amber-500 text-slate-950 font-bold" data-category="all">
+                        All Works (<span id="count-all">0</span>)
+                    </button>
+                    <button onclick="setFilter('House Wiring', this)" class="filter-btn px-4 py-2 rounded-lg font-medium whitespace-nowrap transition bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" data-category="House Wiring">
+                        House Wiring
+                    </button>
+                    <button onclick="setFilter('Ceiling & Lights', this)" class="filter-btn px-4 py-2 rounded-lg font-medium whitespace-nowrap transition bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" data-category="Ceiling & Lights">
+                        Ceiling & Lights
+                    </button>
+                    <button onclick="setFilter('MCB & Panels', this)" class="filter-btn px-4 py-2 rounded-lg font-medium whitespace-nowrap transition bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" data-category="MCB & Panels">
+                        MCB & Panels
+                    </button>
+                    <button onclick="setFilter('Commercial', this)" class="filter-btn px-4 py-2 rounded-lg font-medium whitespace-nowrap transition bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" data-category="Commercial">
+                        Commercial
+                    </button>
+                    <button onclick="setFilter('Repairs', this)" class="filter-btn px-4 py-2 rounded-lg font-medium whitespace-nowrap transition bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" data-category="Repairs">
+                        Repairs & Motors
+                    </button>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div id="galleryContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Cards will be populated dynamically by JavaScript -->
+                </div>
+
+                <!-- Empty State Message (hidden by default) -->
+                <div id="emptyState" class="hidden text-center py-16 bg-slate-900/40 rounded-2xl border border-dashed border-slate-800">
+                    <i class="fa-solid fa-images text-4xl text-slate-600 mb-3"></i>
+                    <h3 class="text-base font-bold text-slate-300">No photos in this category</h3>
+                    <p class="text-xs text-slate-500 mt-1">Upload a photo to see it here immediately.</p>
+                    <button onclick="openUploadModal()" class="mt-4 px-4 py-2 bg-amber-500 text-slate-950 rounded-lg text-xs font-bold inline-flex items-center gap-2">
+                        <i class="fa-solid fa-camera"></i> Upload First Photo
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="py-16 bg-slate-900/50 border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <div class="text-xs font-semibold text-amber-400 uppercase tracking-wider mb-1">Expertise</div>
+                    <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-white">Electrical Services</h2>
+                    <p class="text-slate-400 text-sm mt-1">Full-service capabilities from small residential fixes to industrial setups.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                    <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition">
+                        <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-lg mb-4">
+                            <i class="fa-solid fa-house"></i>
+                        </div>
+                        <h3 class="font-bold text-base text-white mb-2">Concealed Wiring</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">Precision wall channelling, pipe laying, copper wire pulling and modular fitting for new builds.</p>
+                    </div>
+
+                    <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition">
+                        <div class="w-10 h-10 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-lg mb-4">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                        <h3 class="font-bold text-base text-white mb-2">Architectural Lighting</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">False ceiling COB downlights, LED magnetic tracks, profile linear strips and chandelier hangs.</p>
+                    </div>
+
+                    <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition">
+                        <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg mb-4">
+                            <i class="fa-solid fa-bolt-lightning"></i>
+                        </div>
+                        <h3 class="font-bold text-base text-white mb-2">MCB & Panels</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">Distribution box routing, RCCB earth leakage protection, phase balancing and heavy earthing.</p>
+                    </div>
+
+                    <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition">
+                        <div class="w-10 h-10 rounded-lg bg-purple-500/10 text-purple-400 flex items-center justify-center text-lg mb-4">
+                            <i class="fa-solid fa-car-battery"></i>
+                        </div>
+                        <h3 class="font-bold text-base text-white mb-2">Backup & Motors</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">Inverter/battery setup, stabilizer bypass wiring, water pumps, and motor starter overhaul.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 border-t border-slate-800 bg-slate-950">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+                <div class="p-8 sm:p-12 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-850 border border-slate-800 shadow-2xl relative overflow-hidden">
+                    <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+                    <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-white">Have an Electrical Requirement?</h2>
+                    <p class="text-slate-400 text-sm sm:text-base mt-2 max-w-xl mx-auto">
+                        Speak directly with Junaid Shah for site consultations, estimation quotes, or emergency fault repairs.
+                    </p>
+
+                    <div class="my-6">
+                        <a href="tel:+919876543210" class="text-2xl sm:text-3xl font-extrabold text-amber-400 hover:text-amber-300 font-mono tracking-wide inline-block transition">
+                            +91 98765-43210
+                        </a>
+                    </div>
+
+                    <div class="flex flex-wrap items-center justify-center gap-4">
+                        <a href="tel:+919876543210" class="px-6 py-3 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold rounded-xl text-sm transition flex items-center gap-2">
+                            <i class="fa-solid fa-phone"></i> Call Junaid Shah
+                        </a>
+                        <a href="https://wa.me/919876543210?text=Hello%20Junaid,%20I%20need%20electrical%20work." target="_blank" class="px-6 py-3 bg-[#25d366] hover:bg-[#20ba59] text-white font-bold rounded-xl text-sm transition flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> Message on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-950 border-t border-slate-850 py-6 text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div>
+                &copy; 2026 <strong>Hasnain Electrician</strong> &bull; Contractor: Junaid Shah
+            </div>
+            <div class="flex items-center gap-4 text-slate-400">
+                <button onclick="openUploadModal()" class="hover:text-amber-400 transition text-xs flex items-center gap-1">
+                    <i class="fa-solid fa-camera"></i> Upload Photo
+                </button>
+                <button onclick="resetToSampleData()" class="hover:text-rose-400 transition text-xs">
+                    Reset Samples
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919876543210?text=Hello%20Junaid,%20I%20am%20contacting%20you%20via%20your%20website." target="_blank" class="fixed bottom-6 right-6 w-14 h-14 rounded-full bg-[#25d366] hover:bg-[#20ba59] text-white flex items-center justify-center text-2xl shadow-xl hover:scale-105 transition-all z-30" title="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <div id="uploadModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl w-full max-w-lg overflow-hidden shadow-2xl animate-in fade-in zoom-in-95 duration-200">
+            
+            <div class="px-6 py-4 border-b border-slate-800 flex items-center justify-between">
+                <div class="flex items-center gap-2.5">
+                    <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-sm font-bold">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-white text-base">Add New Work Photo</h3>
+                        <p class="text-xs text-slate-400">Upload directly from mobile camera or gallery</p>
+                    </div>
+                </div>
+                <button onclick="closeUploadModal()" class="text-slate-400 hover:text-white p-1 rounded-lg">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <form id="uploadForm" onsubmit="handleWorkUpload(event)" class="p-6 space-y-4">
+                
+                <!-- Photo File Picker / Drop Zone -->
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1.5">Select Photo *</label>
+                    <div id="dropZone" class="border-2 border-dashed border-slate-700 hover:border-amber-500/50 rounded-xl p-4 text-center cursor-pointer transition bg-slate-950/50" onclick="document.getElementById('fileInput').click()">
+                        <input type="file" id="fileInput" accept="image/*" class="hidden" onchange="previewSelectedImage(event)" required>
+                        <div id="uploadPlaceholder">
+                            <i class="fa-solid fa-camera text-2xl text-slate-500 mb-2"></i>
+                            <div class="text-xs text-slate-300 font-medium">Click to Take Picture or Upload</div>
+                            <div class="text-[11px] text-slate-500 mt-1">Supports JPG, PNG, WEBP from phone or PC</div>
+                        </div>
+                        <div id="previewContainer" class="hidden relative">
+                            <img id="imagePreview" src="" alt="Work preview" class="w-full h-44 object-cover rounded-lg border border-slate-700">
+                            <span class="absolute top-2 right-2 bg-slate-900/90 text-amber-400 text-xs px-2 py-1 rounded font-medium">
+                                <i class="fa-solid fa-arrows-rotate mr-1"></i> Change
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work Title -->
+                <div>
+                    <label for="workTitle" class="block text-xs font-semibold text-slate-300 mb-1.5">Work Title *</label>
+                    <input type="text" id="workTitle" placeholder="e.g. 3BHK Concealed Wiring & Pipe Fitting" required
+                           class="w-full px-3.5 py-2.5 rounded-lg bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:border-amber-500 transition">
+                </div>
+
+                <!-- Category -->
+                <div>
+                    <label for="workCategory" class="block text-xs font-semibold text-slate-300 mb-1.5">Category *</label>
+                    <select id="workCategory" required class="w-full px-3.5 py-2.5 rounded-lg bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:border-amber-500 transition">
+                        <option value="House Wiring">House Wiring</option>
+                        <option value="Ceiling & Lights">Ceiling & Lights</option>
+                        <option value="MCB & Panels">MCB & Panels</option>
+                        <option value="Commercial">Commercial</option>
+                        <option value="Repairs">Repairs & Motors</option>
+                    </select>
+                </div>
+
+                <!-- Location / Description -->
+                <div>
+                    <label for="workDesc" class="block text-xs font-semibold text-slate-300 mb-1.5">Location or Brief Note</label>
+                    <input type="text" id="workDesc" placeholder="e.g. Completed with 100% pure copper wires and modular switches" 
+                           class="w-full px-3.5 py-2.5 rounded-lg bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:border-amber-500 transition">
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="pt-2 flex items-center justify-end gap-3">
+                    <button type="button" onclick="closeUploadModal()" class="px-4 py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold transition">
+                        Cancel
+                    </button>
+                    <button type="submit" id="submitBtn" class="px-5 py-2.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold transition flex items-center gap-2">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Publish to Website</span>
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+    <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-md hidden items-center justify-center p-4">
+        <button onclick="closeLightbox()" class="absolute top-5 right-5 text-slate-400 hover:text-white text-2xl p-2 z-10">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="max-w-4xl w-full text-center">
+            <img id="lightboxImg" src="" alt="Full view" class="max-h-[75vh] mx-auto rounded-xl object-contain border border-slate-800 shadow-2xl">
+            <div class="mt-4">
+                <span id="lightboxCategory" class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-2.5 py-1 rounded"></span>
+                <h3 id="lightboxTitle" class="text-lg font-bold text-white mt-2"></h3>
+                <p id="lightboxDesc" class="text-xs text-slate-400 mt-1 max-w-lg mx-auto"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Default seed works if localStorage is empty
+        const defaultWorks = [
+            {
+                id: 'def-1',
+                title: '3BHK Concealed House Wiring',
+                category: 'House Wiring',
+                desc: 'Precision wall groove cutting, PVC conduit layout, and pure copper wiring.',
+                image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80',
+                date: 'Recent',
+                isDefault: true
+            },
+            {
+                id: 'def-2',
+                title: 'False Ceiling COB & Profile Lights',
+                category: 'Ceiling & Lights',
+                desc: 'Warm-white recessed lighting, dynamic LED strip and decorative chandelier setup.',
+                image: 'https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80',
+                date: 'Recent',
+                isDefault: true
+            },
+            {
+                id: 'def-3',
+                title: 'Main MCB Distribution Panel & Earth Pit',
+                category: 'MCB & Panels',
+                desc: '3-phase distribution board installation with RCCB earth leakage trip protection.',
+                image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80',
+                date: 'Recent',
+                isDefault: true
+            },
+            {
+                id: 'def-4',
+                title: 'Commercial Showroom Display Lighting',
+                category: 'Commercial',
+                desc: 'High-power magnetic track lights and separate dedicated breaker boxes.',
+                image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80',
+                date: 'Recent',
+                isDefault: true
+            },
+            {
+                id: 'def-5',
+                title: 'Dual Battery Inverter & Bypass Setup',
+                category: 'Repairs',
+                desc: 'Uninterrupted power back-up installation with heavy gauge connections.',
+                image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80',
+                date: 'Recent',
+                isDefault: true
+            },
+            {
+                id: 'def-6',
+                title: 'Submersible Pump Starter & Motor Repair',
+                category: 'Repairs',
+                desc: 'On-site starter contactor replacement and capacitor balancing.',
+                image: 'https://images.unsplash.com/photo-1544717302-de2939b7ef71?auto=format&fit=crop&w=800&q=80',
+                date: 'Recent',
+                isDefault: true
+            }
+        ];
+
+        let currentFilter = 'all';
+        let worksData = [];
+        let currentUploadedBase64 = null;
+
+        // Initialize Data on page load
+        function initApp() {
+            try {
+                const stored = localStorage.getItem('hasnain_works');
+                if (stored) {
+                    worksData = JSON.parse(stored);
+                } else {
+                    worksData = [...defaultWorks];
+                    localStorage.setItem('hasnain_works', JSON.stringify(worksData));
+                }
+            } catch (err) {
+                console.error('Storage error:', err);
+                worksData = [...defaultWorks];
+            }
+            renderGallery();
+        }
+
+        // Render Cards
+        function renderGallery() {
+            const container = document.getElementById('galleryContainer');
+            const emptyState = document.getElementById('emptyState');
+            const countAll = document.getElementById('count-all');
+
+            if (!container) return;
+            countAll.textContent = worksData.length;
+
+            const filtered = currentFilter === 'all' 
+                ? worksData 
+                : worksData.filter(item => item.category === currentFilter);
+
+            if (filtered.length === 0) {
+                container.innerHTML = '';
+                emptyState.classList.remove('hidden');
+                return;
+            } else {
+                emptyState.classList.add('hidden');
+            }
+
+            container.innerHTML = filtered.map(item => {
+                const isCustom = !item.isDefault;
+                return `
+                    <div class="work-card group bg-slate-900 border border-slate-800 hover:border-slate-700 rounded-2xl overflow-hidden shadow-lg transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="relative h-52 sm:h-56 bg-slate-950 overflow-hidden cursor-pointer" onclick="openLightbox('${item.id}')">
+                                <img src="${item.image}" alt="${escapeHtml(item.title)}" 
+                                     class="work-thumb w-full h-full object-cover transition-transform duration-500 ease-out"
+                                     onerror="this.src='https://placehold.co/600x400/0f172a/f59e0b?text=Electrical+Work'">
+                                <span class="absolute top-3 left-3 bg-slate-950/85 backdrop-blur-md text-amber-400 text-[11px] font-bold px-2.5 py-1 rounded-md border border-slate-800">
+                                    ${escapeHtml(item.category)}
+                                </span>
+                                ${isCustom ? `
+                                    <span class="absolute top-3 right-3 bg-emerald-500/90 text-slate-950 text-[10px] font-extrabold px-2 py-0.5 rounded shadow">
+                                        Uploaded Work
+                                    </span>
+                                ` : ''}
+                            </div>
+
+                            <div class="p-5">
+                                <h3 class="text-base font-bold text-white group-hover:text-amber-400 transition leading-snug">
+                                    ${escapeHtml(item.title)}
+                                </h3>
+                                <p class="text-xs text-slate-400 mt-2 line-clamp-2 leading-relaxed">
+                                    ${escapeHtml(item.desc || 'Quality electrical work executed on-site by Junaid Shah.')}
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="px-5 pb-5 pt-2 flex items-center justify-between border-t border-slate-800/80 text-xs">
+                            <button onclick="openLightbox('${item.id}')" class="text-amber-400 hover:text-amber-300 font-semibold flex items-center gap-1">
+                                <i class="fa-solid fa-expand text-[10px]"></i> View Full Photo
+                            </button>
+
+                            ${isCustom ? `
+                                <button onclick="deleteWork('${item.id}', event)" class="text-rose-400 hover:text-rose-300 text-xs font-medium flex items-center gap-1" title="Delete this work">
+                                    <i class="fa-regular fa-trash-can"></i> Delete
+                                </button>
+                            ` : `
+                                <span class="text-slate-500 text-[11px]">Site Verified</span>
+                            `}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Filter Selection
+        function setFilter(cat, btn) {
+            currentFilter = cat;
+            document.querySelectorAll('.filter-btn').forEach(b => {
+                b.classList.remove('bg-amber-500', 'text-slate-950', 'font-bold');
+                b.classList.add('bg-slate-900', 'text-slate-300', 'border', 'border-slate-800');
+            });
+            btn.classList.remove('bg-slate-900', 'text-slate-300', 'border', 'border-slate-800');
+            btn.classList.add('bg-amber-500', 'text-slate-950', 'font-bold');
+            renderGallery();
+        }
+
+        // Open Upload Modal
+        function openUploadModal() {
+            document.getElementById('uploadModal').classList.remove('hidden');
+            document.getElementById('uploadModal').classList.add('flex');
+        }
+
+        // Close Upload Modal
+        function closeUploadModal() {
+            document.getElementById('uploadModal').classList.add('hidden');
+            document.getElementById('uploadModal').classList.remove('flex');
+            document.getElementById('uploadForm').reset();
+            document.getElementById('uploadPlaceholder').classList.remove('hidden');
+            document.getElementById('previewContainer').classList.add('hidden');
+            currentUploadedBase64 = null;
+        }
+
+        // Preview and Compress image on user selection
+        function previewSelectedImage(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const img = new Image();
+                img.onload = function() {
+                    // Compress image using canvas so it fits well into localStorage
+                    const canvas = document.createElement('canvas');
+                    const MAX_WIDTH = 900;
+                    const scaleSize = MAX_WIDTH / img.width;
+                    const targetWidth = (img.width > MAX_WIDTH) ? MAX_WIDTH : img.width;
+                    const targetHeight = (img.width > MAX_WIDTH) ? (img.height * scaleSize) : img.height;
+
+                    canvas.width = targetWidth;
+                    canvas.height = targetHeight;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0, targetWidth, targetHeight);
+
+                    // JPEG quality 0.72 for compact size and high visual clarity
+                    currentUploadedBase64 = canvas.toDataURL('image/jpeg', 0.72);
+                    
+                    document.getElementById('imagePreview').src = currentUploadedBase64;
+                    document.getElementById('uploadPlaceholder').classList.add('hidden');
+                    document.getElementById('previewContainer').classList.remove('hidden');
+                };
+                img.src = event.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        // Handle Form Submission
+        function handleWorkUpload(e) {
+            e.preventDefault();
+            if (!currentUploadedBase64) {
+                // If user didn't pick an image file
+                return;
+            }
+
+            const title = document.getElementById('workTitle').value.trim();
+            const category = document.getElementById('workCategory').value;
+            const desc = document.getElementById('workDesc').value.trim();
+
+            const newWork = {
+                id: 'custom-' + Date.now(),
+                title: title,
+                category: category,
+                desc: desc || 'Completed by Junaid Shah (Hasnain Electrician).',
+                image: currentUploadedBase64,
+                date: 'Just now',
+                isDefault: false
+            };
+
+            // Prepend new work so it appears first
+            worksData.unshift(newWork);
+
+            try {
+                localStorage.setItem('hasnain_works', JSON.stringify(worksData));
+            } catch (err) {
+                console.warn('Storage limit reached, removing older custom items:', err);
+                // In case of quota warning, fallback to in-memory state
+            }
+
+            closeUploadModal();
+            // Switch filter to either 'all' or the newly uploaded category
+            currentFilter = category;
+            const catBtn = document.querySelector(`.filter-btn[data-category="${category}"]`) || document.querySelector('.filter-btn[data-category="all"]');
+            if (catBtn) setFilter(category, catBtn);
+            else renderGallery();
+        }
+
+        // Delete an uploaded photo
+        function deleteWork(id, event) {
+            event.stopPropagation();
+            worksData = worksData.filter(item => item.id !== id);
+            try {
+                localStorage.setItem('hasnain_works', JSON.stringify(worksData));
+            } catch (err) {
+                console.error(err);
+            }
+            renderGallery();
+        }
+
+        // Reset to default sample works
+        function resetToSampleData() {
+            worksData = [...defaultWorks];
+            try {
+                localStorage.setItem('hasnain_works', JSON.stringify(worksData));
+            } catch (err) {}
+            currentFilter = 'all';
+            const allBtn = document.querySelector('.filter-btn[data-category="all"]');
+            if (allBtn) setFilter('all', allBtn);
+            else renderGallery();
+        }
+
+        // Lightbox Functions
+        function openLightbox(id) {
+            const item = worksData.find(w => w.id === id);
+            if (!item) return;
+
+            document.getElementById('lightboxImg').src = item.image;
+            document.getElementById('lightboxTitle').textContent = item.title;
+            document.getElementById('lightboxCategory').textContent = item.category;
+            document.getElementById('lightboxDesc').textContent = item.desc || '';
+
+            const modal = document.getElementById('lightboxModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById('lightboxModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Utility helper to prevent XSS
+        function escapeHtml(str) {
+            if (!str) return '';
+            return str
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#039;');
+        }
+
+        // Close modals on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeUploadModal();
+                closeLightbox();
+            }
+        });
+
+        // Initialize on load
+        window.addEventListener('DOMContentLoaded', initApp);
+    </script>
+</body>
+</html>
